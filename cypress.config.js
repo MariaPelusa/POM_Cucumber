@@ -6,9 +6,9 @@ const getCompareSnapshotsPlugin = require('cypress-image-diff-js/plugin');
 module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/features/**/*.feature",
-    baseUrl: 'https://es.wikipedia.org/',
-    async setupNodeEvents(on, config) {
-      await addCucumberPreprocessorPlugin(on, config);
+    baseUrl: 'https://todomvc.com/examples/react/dist/#/',
+    setupNodeEvents(on, config) {
+      addCucumberPreprocessorPlugin(on, config);
       const options = {
         webpackOptions: {
           module: {

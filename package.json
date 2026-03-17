@@ -1,19 +1,19 @@
 {
-  "name": "cypress-cucumber-e2e-base",
+  "name": "documentacion_cucumber",
   "version": "1.0.0",
-  "description": "Cypress base project",
+  "description": "Cypress and Cucumber project",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "open:local": "npx cypress open --config-file cypress.local.config.js",
-    "open:des": "npx cypress open --config-file cypress.des.config.js",
+    "open": "npx cypress open --config-file cypress.config.js",
+    "open:local": "npx cypress open --config-file cypress.config.js",
+    "open:des": "npx cypress open --config-file cypress.config.js",
     "generate:report": "./node_modules/.bin/generate-mochawesome-report --saveJson --jsonDir results/mochawesome/json -o results/mochawesome/report"
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
     "@cypress/webpack-preprocessor": "^6.0.1",
     "cucumber-json-merge": "^0.0.8",
-    "cypress": "13.9.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-image-diff-js": "^2.1.4",
     "cypress-mochawesome-reporter": "^3.8.2",
@@ -31,5 +31,8 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
+  },
+  "devDependencies": {
+    "cypress": "^15.12.0"
   }
 }
