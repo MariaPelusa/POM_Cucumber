@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "test": "cypress run",
     "open": "npx cypress open --config-file cypress.config.js",
     "open:local": "npx cypress open --config-file cypress.config.js",
     "open:des": "npx cypress open --config-file cypress.config.js",
